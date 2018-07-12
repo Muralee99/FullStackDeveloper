@@ -9,7 +9,7 @@ export class AuthenticationService {
   constructor(private httpClient: HttpClient) { }
 
   authenticateUser(data) {
-    return this.httpClient.post('http://localhost:3000/auth/v1', data).catch((error: HttpErrorResponse) => {
+    return this.httpClient.post('http://localhost:3000/auth/v1/', data).catch((error: HttpErrorResponse) => {
       // console.error('An error occurred:', error.error);
       return Observable.throw(error);
     });
