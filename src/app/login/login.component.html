@@ -1,0 +1,13 @@
+<strong *ngIf="submitMessage" class="error-message">{{submitMessage}}</strong>
+<div class="login-container">
+  <mat-form-field>
+    <input class='username' placeholder="Enter your User Name" matInput [formControl]="username" required>
+    <mat-error *ngIf="username.invalid">{{getUserNameErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input class='password' placeholder="Enter your password" matInput type="password" [formControl]="password" required>
+    <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <button mat-button (click)='loginSubmit()'>Submit</button>
+  {{submitMessage}}
+</div>

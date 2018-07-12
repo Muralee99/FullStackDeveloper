@@ -1,0 +1,17 @@
+<div class='keep-c-note-taker-form'>
+	<mat-form-field>
+		<input matInput [(ngModel)] = 'note.title' placeholder = 'Title' id='title' type='text' />
+		<h1>{{title}}</h1>
+	</mat-form-field>
+	<mat-form-field>
+		<textarea matInput [(ngModel)] = 'note.text'
+				id = 'text'
+				placeholder = 'Text' type='text'>
+				</textarea>	
+<h1>{{text}}</h1>				
+	</mat-form-field>
+	<div class ='keep-c-done-btn-wrapper'>
+		<button mat-button (click)='editNote()'  type = 'button' name='button'>Save</button>
+	</div>
+	
+</div>

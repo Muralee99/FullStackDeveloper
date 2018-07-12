@@ -1,0 +1,26 @@
+.error-message{
+}
+
+.keep-component-note-taker-panel{
+	width : 50vw;
+	margin : auto;
+}
+.keep-component-notes-taker-wrapper{
+	display: flex;
+	flex-direction: column;
+}
+.keep-component-button{
+	display : flex;
+	justify-content: flex-end;
+}
+.keep-note-container{
+	display: flex;
+	margin: 20px;
+}
+.keep-note-card{
+	margin-left: 1em;
+}
+
+.mat-card-title{
+	margin : auto;
+}

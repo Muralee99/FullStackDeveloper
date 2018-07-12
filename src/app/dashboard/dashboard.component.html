@@ -1,11 +1,37 @@
-<!-- Label to display any error messages -->
-<label class="error-message">{{ errMessage }}</label>
+<!-- Label to display any error messages 
+<label class="error-message">{{ errMessage }}</label>-->
 
 <!-- Expansion panel to add new notes -->
 
-
-
-
-
-
 <!-- Load and display the collection of notes from server as Material Cards with card title set to note title and card content set to note text  -->
+<strong *ngIf="submitMessage" class="error-message">{{submitMessage}}</strong>
+<div class = "keep-component-note-taker-panel">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Take a note
+      </mat-panel-title>
+      <mat-panel-description>
+       
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+	<div class = 'keep-component-note-taker-wrapper'>
+    <mat-form-field>
+      <input matInput [(ngModel)]="note.title" placeholder="Title" name="title">
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea matInput [(ngModel)]="note.text" placeholder="Text" name="text"></textarea>
+    </mat-form-field>
+	
+	<div class = 'keep-component-button'>
+		<button mat-button (click)= "takeNotes()">Done</button>
+	</div>
+	
+	</div>
+  </mat-expansion-panel>  
+</div>
+<router-outlet></router-outlet>
+<router-outlet name = 'noteEditOutlet'></router-outlet>
+<!-- <app-note-view></app-note-view> -->
